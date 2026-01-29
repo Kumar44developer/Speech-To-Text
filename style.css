@@ -66,3 +66,5 @@ button{
     outline: none;
     border: none;
     animation: pulse 1.5s infinite alternate;
+    cursor: pointer;
+}
