@@ -64,3 +64,5 @@ button{
     background-color: indigo;
     color: #fff;
     outline: none;
+    border: none;
+    animation: pulse 1.5s infinite alternate;
