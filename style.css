@@ -47,3 +47,7 @@ h2{
     background: linear-gradient(168deg, #ff9a9e,#fad0c4);
     border-radius: 3px;
 }
+
+
+.button-container{
+    display: flex;
