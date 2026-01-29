@@ -62,3 +62,5 @@ button{
     width: 80px;
     border-radius: 50%;
     background-color: indigo;
+    color: #fff;
+    outline: none;
