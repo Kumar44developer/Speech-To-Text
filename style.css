@@ -77,3 +77,5 @@ button:hover{
 @keyframes pulse {
     
     from{
+        transform: scale(1);
+    }
