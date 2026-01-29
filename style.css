@@ -44,3 +44,6 @@ h2{
     height: 300px;
     width: 90%;
     margin-bottom: 30px;
+    background: linear-gradient(168deg, #ff9a9e,#fad0c4);
+    border-radius: 3px;
+}
