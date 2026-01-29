@@ -68,3 +68,7 @@ button{
     animation: pulse 1.5s infinite alternate;
     cursor: pointer;
 }
+
+button:hover{
+    background-color: darkblue;
+}
