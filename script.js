@@ -9,3 +9,4 @@ function startConverting(){
     }
 }
 function setupRecognition(recognition){
+    recognition.continuous = true;
