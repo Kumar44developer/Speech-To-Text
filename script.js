@@ -15,3 +15,9 @@ function setupRecognition(recognition){
 
 recognition.onresult = function(event){
         const {finalTranscript , interTranscript } = processResult(event.results);
+       resultElement.innerHTML = finalTranscript + interTranscript;
+        
+    }
+
+
+}
