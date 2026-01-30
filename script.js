@@ -35,3 +35,7 @@ function processResult(results){
 
             interTranscript += transcript;
         }
+
+    }
+
+    return {finalTranscript, interTranscript}
