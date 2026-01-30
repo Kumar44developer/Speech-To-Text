@@ -8,3 +8,4 @@ function startConverting(){
         recognition.start();
     }
 }
+function setupRecognition(recognition){
