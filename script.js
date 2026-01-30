@@ -30,3 +30,4 @@ function processResult(results){
         let transcript = results[i][0].transcript;
         transcript.replace("\n","<br>");
         if(results[i].isFinal){
+            finalTranscript += transcript;
