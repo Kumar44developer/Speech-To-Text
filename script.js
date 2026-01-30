@@ -31,3 +31,4 @@ function processResult(results){
         transcript.replace("\n","<br>");
         if(results[i].isFinal){
             finalTranscript += transcript;
+        }else{
