@@ -28,3 +28,4 @@ function processResult(results){
 
     for(let i = 0; i < results.length; i++){
         let transcript = results[i][0].transcript;
+        transcript.replace("\n","<br>");
