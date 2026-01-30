@@ -23,3 +23,4 @@ recognition.onresult = function(event){
 }
 
 function processResult(results){
+    let finalTranscript = '';
