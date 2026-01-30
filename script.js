@@ -12,3 +12,5 @@ function setupRecognition(recognition){
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = 'en-US';
+
+recognition.onresult = function(event){
