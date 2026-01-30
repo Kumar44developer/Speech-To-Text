@@ -25,3 +25,5 @@ recognition.onresult = function(event){
 function processResult(results){
     let finalTranscript = '';
     let interTranscript = '';
+
+    for(let i = 0; i < results.length; i++){
