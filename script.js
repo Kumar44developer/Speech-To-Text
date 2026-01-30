@@ -32,3 +32,6 @@ function processResult(results){
         if(results[i].isFinal){
             finalTranscript += transcript;
         }else{
+
+            interTranscript += transcript;
+        }
