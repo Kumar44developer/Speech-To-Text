@@ -39,3 +39,9 @@ function processResult(results){
     }
 
     return {finalTranscript, interTranscript}
+
+
+}
+
+
+function stopConverting(){
