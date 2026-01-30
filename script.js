@@ -14,3 +14,4 @@ function setupRecognition(recognition){
     recognition.lang = 'en-US';
 
 recognition.onresult = function(event){
+        const {finalTranscript , interTranscript } = processResult(event.results);
