@@ -2,10 +2,13 @@ const resultElement = document.getElementById("result");
 let recognition;
 
 function startConverting(){
-    if('webkitSpeechRecognition' in window){
-        recognition  = new webkitSpeechRecognition();
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if(SpeechRecognition){
+        recognition = new SpeechRecognition();
         setupRecognition(recognition);
         recognition.start();
+    } else {
+        alert("Speech recognition is not supported in this browser. Please use Google Chrome or Microsoft Edge.");
     }
 }
 function setupRecognition(recognition){
@@ -13,13 +16,14 @@ function setupRecognition(recognition){
     recognition.interimResults = true;
     recognition.lang = 'en-US';
 
-recognition.onresult = function(event){
+    recognition.onresult = function(event){
         const {finalTranscript , interTranscript } = processResult(event.results);
-       resultElement.innerHTML = finalTranscript + interTranscript;
-        
-    }
+        resultElement.innerHTML = finalTranscript + interTranscript;
+    };
 
-
+    recognition.onerror = function(event){
+        console.error("Speech recognition error:", event.error);
+    };
 }
 
 function processResult(results){
@@ -28,7 +32,7 @@ function processResult(results){
 
     for(let i = 0; i < results.length; i++){
         let transcript = results[i][0].transcript;
-        transcript.replace("\n","<br>");
+        transcript = transcript.replace(/\n/g, "<br>");
         if(results[i].isFinal){
             finalTranscript += transcript;
         }else{
